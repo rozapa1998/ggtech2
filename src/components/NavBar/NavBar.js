@@ -18,16 +18,16 @@ const NavBar = () => {
   <li className="nav-item px-4">
     <Link to="/nosotros" className="nav-link active blanco">Nosotros</Link>
   </li>
-  <li class="nav-item px-4">
+  <li className="nav-item px-4">
     <Link to="/ofertas" className="nav-link active blanco" href="#">Contacto</Link>
   </li>
   <li>
     <img className="logo px-3" src={Logo} alt="Logo"></img>
   </li>
-  <li class="nav-item px-4">
+  <li className="nav-item px-4">
     <Link to="/ofertas" className="nav-link active blanco" href="#">Ofertas</Link>
   </li>
-  <li class="nav-item px-4">
+  <li className="nav-item px-4">
     <Link to="/componentes" className="nav-link active blanco" href="#">Componentes</Link>
   </li>
   <li className="nav-item px-4">

@@ -11,7 +11,7 @@ const ItemList = () => {
         const Items =
         [
             {
-                id: 1,
+                id: 0,
                 titulo: "Gabinete sentey",
                 precio : 10000,
                 descripcion: "Sentey sorprende nuevamente con sus nuevos gabinetes...",
@@ -19,7 +19,7 @@ const ItemList = () => {
                 stock: 15
             },
             {
-                id: 2,
+                id: 1,
                 titulo: "Gabinete Cooler Master",
                 precio : 15000,
                 descripcion: "Gran gabinete de buena aireacion, con luces led rgb",
@@ -27,7 +27,7 @@ const ItemList = () => {
                 stock: 10
             },
             {
-                id: 3,
+                id: 2,
                 titulo: "Gabinete Corsair",
                 precio : 20000,
                 descripcion: "Gran gabinete de buena aireacion, con luces led rojas",
@@ -35,7 +35,7 @@ const ItemList = () => {
                 stock: 5
             },
             {
-                id: 4,
+                id: 3,
                 titulo: "Auriculares Logitech",
                 precio : 14000,
                 descripcion: "Excelente sonido y comodidad",
@@ -43,7 +43,7 @@ const ItemList = () => {
                 stock: 15
             },                    
             {
-                id: 5,
+                id: 4,
                 titulo: "Auriculares Razer Kraken",
                 precio : 8000,
                 descripcion: "Clasicos y confiables",
@@ -51,7 +51,7 @@ const ItemList = () => {
                 stock: 8
             },
             {
-                id: 6,
+                id: 5,
                 titulo: "Auriculares HiperX PS",
                 precio : 9500,
                 descripcion: "Retrocompatibles con PS4",
@@ -73,17 +73,13 @@ const ItemList = () => {
             <div className="row">
                 {productos.map(producto => {
                 return(
-                    
-                    <Item 
+                    <Item
+                    key={producto.id} 
                     img={producto.img}
                     id={producto.id}
                     precio={producto.precio}
                     titulo={producto.titulo}
                     descripcion={producto.descripcion} />
-                    
-                    
-                    
-                
                 )}
                 )}
                 </div>

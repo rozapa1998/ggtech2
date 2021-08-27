@@ -28,7 +28,6 @@ const App = () => {
         <Route path="/componentes" component={Componentes}/>
         <Route path="/detail/:id" component={DetalleProducto}/>
       </Switch>
-      <DetalleProducto></DetalleProducto>
     </div>
     </Router>
   );

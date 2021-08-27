@@ -10,7 +10,9 @@ import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
 const ItemDetails = ({img,precio,titulo,descripcion,id}) => {
     return (
         <div className="ItemDetails">
-            <div className="card mb-3 grande shadow-lg pt-5">
+            <div className="container pt-5">
+                <div className="row">
+                <div className="card mb-3 grande shadow-lg pt-5">
                 <div className="row g-0">
                     <div className="col-md-4">
                     <img src={img} className="img-fluid rounded-start" alt="Producto"></img>
@@ -36,6 +38,9 @@ const ItemDetails = ({img,precio,titulo,descripcion,id}) => {
                     </div>
                 </div>
             </div>
+                </div>
+            </div>
+            
         </div>
     )
 }
