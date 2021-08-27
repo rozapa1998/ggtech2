@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+//Css
 import './App.css';
+//Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+//NavBar
+import NavBar from './components/NavBar/NavBar';
+//React Router-DOM
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+//Views
+import Home from './components/Views/Home/Home';
+import Contact from './components/Views/Contact/Contact';
+import About from './components/Views/About/About';
+import Ofertas from './components/Views/Ofertas/Ofertas';
+import Componentes from './components/Views/Componentes/Componentes';
+import DetalleProducto from './components/Views/DetalleProducto/DetalleProducto';
 
-function App() {
-  return (
+
+const App = () => {
+  return(
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar title="NavBar"/>
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/contacto" component={Contact}/>
+        <Route path="/nosotros" component={About}/>
+        <Route path="/ofertas" component={Ofertas}/>
+        <Route path="/componentes" component={Componentes}/>
+        <Route path="/detail/:id" component={DetalleProducto}/>
+      </Switch>
+      <DetalleProducto></DetalleProducto>
     </div>
+    </Router>
   );
 }
 
