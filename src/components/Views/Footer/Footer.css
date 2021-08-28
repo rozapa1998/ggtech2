@@ -1,0 +1,25 @@
+/*---------------------------Footer------------------------*/
+
+.footer{
+    background-color: #6351ce;
+}
+
+/*---------------------------Fuente-Footer------------------------*/
+
+.fuente-footer{
+    color: white;
+    font-size: 20px;
+}
+
+/*---------------------------Row-Footer------------------------*/
+.footer-row{
+    background-color: rgb(23, 23, 58);
+}
+
+.subrayado{
+    text-decoration: underline violet;
+}
+
+.descripcion-footer{
+    font-size: 15px;
+}

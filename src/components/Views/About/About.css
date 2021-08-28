@@ -1,0 +1,27 @@
+
+
+/*--------------------------------------------Fondo----------------------------------------*/
+body{
+    background-color: rgb(46, 3, 87);
+}
+
+/*--------------------------------------------IMG----------------------------------------*/
+
+.logoNosotros{
+    padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.logoNosotros:hover {
+    transform: scale(1.2);
+  }
+
+/*--------------------------------------------Descripcion Nosotros----------------------------------------*/
+
+.text-nosotros{
+    color: white;
+    font-size: 20px;
+}

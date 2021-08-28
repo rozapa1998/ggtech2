@@ -1,11 +1,13 @@
+
+/*----------------------------Logo---------------------*/
 .logo{
-  height: 50px;
+  height: 70px;
+  position: relative;
 }
 
+
+/*----------------------------NavItems---------------------*/
 .blanco{
   color: aliceblue;
-}
-
-p{
   font-size: 20px;
 }

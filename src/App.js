@@ -13,6 +13,7 @@ import About from './components/Views/About/About';
 import Ofertas from './components/Views/Ofertas/Ofertas';
 import Componentes from './components/Views/Componentes/Componentes';
 import DetalleProducto from './components/Views/DetalleProducto/DetalleProducto';
+import Footer from './components/Views/Footer/Footer';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/componentes" component={Componentes}/>
         <Route path="/detail/:id" component={DetalleProducto}/>
       </Switch>
+      <Footer/>
     </div>
     </Router>
   );
