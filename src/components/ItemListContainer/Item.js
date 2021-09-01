@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import "./item.css"
 
-const Item = ({img,precio,titulo,descripcion,id,stockDisponible}) => {
+const Item = ({id,img,precio,titulo,descripcion,stockDisponible}) => {
     return (
         
             <div className="Item col-4">
@@ -18,6 +18,7 @@ const Item = ({img,precio,titulo,descripcion,id,stockDisponible}) => {
                             <p className="card-text">{descripcion}</p>
                         </div>
                         <ItemCount stockDisponible={stockDisponible}/>
+                        
                     </div>
                 </div>
             

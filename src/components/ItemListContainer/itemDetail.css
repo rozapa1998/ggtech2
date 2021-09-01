@@ -1,8 +1,12 @@
 .grande{
-    max-width: 1200px
+    max-width: 1500px
 }
 
 .redes{
     font-size: 30px;
     color: black;
+}
+
+.count{
+    margin-left: 473px;
 }

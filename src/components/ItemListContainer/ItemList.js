@@ -60,7 +60,7 @@ const ItemList = () => {
             } 
         ];
         resolve(Items)
-       }, 2000);
+       }, 1500);
    })
     myPromise.then(result =>{
         setProductos(result)
@@ -70,7 +70,7 @@ const ItemList = () => {
     
     return (
         <div className= "ItemList container">
-            <div className="row">
+            <div className="row ms-5">
                 {productos.map(producto => {
                 return(
                     <Item
@@ -79,7 +79,8 @@ const ItemList = () => {
                     id={producto.id}
                     precio={producto.precio}
                     titulo={producto.titulo}
-                    descripcion={producto.descripcion} />
+                    descripcion={producto.descripcion}
+                    stockDisponible={producto.stock}/>
                 )}
                 )}
                 </div>

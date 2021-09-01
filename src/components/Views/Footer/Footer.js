@@ -2,11 +2,12 @@ import React from 'react'
 import "./Footer.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
     <div className="Footer">
-        <div className="container footer">
+        <div className="container footer mt-4">
             <div className="row">
                 <div className="col-4 pt-3">
                     <p className="fuente-footer ">Siguenos en nuestras redes</p>
@@ -42,7 +43,8 @@ const Footer = () => {
                     <p className="fuente-footer"></p>
                 </div>
                 <div className="col-4">
-                    <p className="fuente-footer subrayado">Contacto</p>
+                    <p className="fuente-footer descripcion-footer"><FontAwesomeIcon icon={faPhone}/> +54 11-0000-0000</p>
+                    <p className="fuente-footer descripcion-footer"><FontAwesomeIcon icon={faEnvelope}/> ejemplo.rz@gmail.com</p>
                 </div>
             </div>
         </div>
