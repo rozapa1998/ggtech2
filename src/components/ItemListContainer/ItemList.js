@@ -80,7 +80,7 @@ const ItemList = () => {
                     precio={producto.precio}
                     titulo={producto.titulo}
                     descripcion={producto.descripcion}
-                    stockDisponible={producto.stock}/>
+                    stock={producto.stock}/>
                 )}
                 )}
                 </div>

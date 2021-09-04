@@ -72,7 +72,8 @@ const DetalleProducto = () => {
                 img={productosD.img}
                 titulo={productosD.titulo}
                 descripcion={productosD.descripcion}
-                precio={productosD.precio}/>
+                precio={productosD.precio}
+                stock={productosD.stock}/>
             </div>
         </div>
     )

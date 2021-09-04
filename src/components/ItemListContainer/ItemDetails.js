@@ -42,7 +42,7 @@ const ItemDetails = ({img,precio,titulo,descripcion,id,stock}) => {
                                 <div className="container p-3">
                                             <div className="container col-5 count text-end relative-bottom">
                                                 <ItemCount
-                                                stock={stock - count}
+                                                stock={stock}
                                                 />
                                             </div>
                                 </div>
