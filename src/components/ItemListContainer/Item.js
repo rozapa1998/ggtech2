@@ -8,7 +8,7 @@ const Item = ({id,img,precio,titulo,descripcion,stock}) => {
         
             <div className="Item col-4">
                 
-                    <div className="card shadow-lg p-3 mb-5 bg-body rounded pequeñas">
+                    <div className="card shadow-lg p-3 mb-5 bg-body rounded pequeñas zoomItem">
                     <Link to={`/detail/${id}`}>
                         <img src={img} className="card-img-top" alt="Oferta"></img>
                     </Link>
