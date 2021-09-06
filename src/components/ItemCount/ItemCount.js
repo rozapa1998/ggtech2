@@ -5,7 +5,6 @@ import "./ItemCount.css"
     //Modificadores
     function ItemCount( {stock} ) {
         const [count, setCount] = useState(0);
-        const [productoC, setProductoC] = useState({})
     
         const agregar = (max) => {
             count < max ? setCount(count + 1) : alert('Max. Superada');
@@ -52,7 +51,7 @@ import "./ItemCount.css"
             </div>
             {count >= 1 ? <div className="row">
                 <div className="col-12 ps-5">
-                    <Link to="/cart"><button type="button" onClick={onAdd} id= 'btnCompra' className="btn btn-info"> Comprar </button></Link>
+                    <button type="button" onClick={onAdd} id= 'btnCompra' className="btn btn-info"><Link to="/cart">Comprar</Link></button>
                 </div>
                 
             </div>: null}

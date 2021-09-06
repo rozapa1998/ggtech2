@@ -1,21 +1,12 @@
-import React,{useState} from 'react'
 import "./itemDetail.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faShoppingCart} from "@fortawesome/free-solid-svg-icons"
 import {faTwitter} from "@fortawesome/free-brands-svg-icons"
 import {faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
 import ItemCount from '../ItemCount/ItemCount';
-import { Link } from 'react-router-dom';
 
 
 const ItemDetails = ({img,precio,titulo,descripcion,id,stock}) => {
-    
-    const[count, setCount] = useState(null)
-
-    const onAdd = (valor) => {
-        valor > 0 ?  setCount(valor) : alert("Agregar producto")
-        }
     
     return (
         <div className="ItemDetails">
