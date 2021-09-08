@@ -1,6 +1,6 @@
 import React, {useState,createContext} from 'react'
 
-export const CartContext = createContext([])
+export const CartContext = createContext()
 
          export const CartProvider = ({ children }) => {
             const [cart, setCart] = useState([]);
@@ -15,10 +15,10 @@ export const CartContext = createContext([])
                     if (cartElement.id === item.id) {
                         return{...cartElement, cantidad:cartElement.cantidad + cantidad};
                     }else return cartElement;
-                    })
+                    });
                     setCart(newCart);
                 }else{
-                    setCart((prev) => [prev, {item, cantidad}])
+                    setCart((prev) => [...prev, {...item, cantidad}])
                 }
             };
             console.log(cart)

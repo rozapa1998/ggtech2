@@ -6,19 +6,35 @@ import "./ItemCount.css"
     //Modificadores
     function ItemCount( {onAdd, stock} ) {
         //StateContador
-        const [count, setCount] = useState(0);
+        const [count, setCount] = useState(1);
 
         //State stock
         const [stockCount, setStockCount] = useState(stock)
         
         //Incrementador
-        const agregar = (max) => {
-            count < max ? setCount(count + 1) : alert('Max. Superada');
+        const agregar = (stock) => {
+            if (count > stock) {
+                alert("No hay mas Stock de este producto")
+            }else{
+                setCount(count + 1)
+                setStockCount(stockCount - 1)
+            }
+            
         }
         
         //Decrementador
         const quitar = () => {
-            count > 0 ? setCount(count-1) : alert('Min. no posible');
+            if (count <= 0) {
+                alert("El pedido no puede ser menor a 0")
+            }else{
+                setCount(count - 1)
+                if (stockCount === 0) {
+                 setStockCount(stock)   
+                }else{
+                    setStockCount(stockCount + 1)
+                }
+                
+            }
         }
     
     //Funciones Eventos
@@ -52,15 +68,21 @@ import "./ItemCount.css"
             <div className="col-4">
                 <button type="button" onClick={() => agregar(stock)} className="btn btn-success">+</button>
             </div>
-            {count >= 1 ? <div className="row">
+            {count > 1 ? <div className="row">
+                <div className="col-12 ps-5">
+                    <button type="button" id= 'btnCompra' className="btn btn-info"><Link to="/cart">Terminar Compra</Link></button>
+                </div>    
+            </div>
+                : 
+                <div className="row">
                 <div className="col-12 ps-5">
                     <button type="button" onClick={()=>{
                         onAdd(count)
-                        setCount(0)
-                    } } id= 'btnCompra' className="btn btn-info"><Link to="/cart">Comprar</Link></button>
-                </div>
-                
-            </div>: null}
+                        setStockCount(stockCount-count)
+                        setCount(1)
+                    } } id= 'btnCompra' className="btn btn-info">Agregar al Carrito</button>
+                </div>    
+            </div>}
             
         </div>
             

@@ -70,6 +70,7 @@ const DetalleProducto = () => {
         <div className="DetalleProducto">
             <div className="row">
                 <ItemDetails
+                key={productosD.id}
                 item={productosD}/>
             </div>
         </div>
