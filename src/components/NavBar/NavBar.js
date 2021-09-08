@@ -16,22 +16,22 @@ const NavBar = () => {
     <Link to="/" className="nav-link active blanco ml-4"><FontAwesomeIcon icon={faHome}/></Link>
   </li>
   <li className="nav-item px-4">
-    <Link to="/nosotros" className="nav-link active blanco">Nosotros</Link>
+  <Link to="/nosotros" className="nav-link active blanco">Nosotros</Link>
   </li>
   <li className="nav-item px-4">
-    <Link to="/contacto" className="nav-link active blanco" href="#">Contacto</Link>
+  <Link to="/contacto" className="nav-link active blanco" href="#">Contacto</Link>
   </li>
   <li>
     <img className="logo px-3" src={Logo} alt="Logo"></img>
   </li>
   <li className="nav-item px-4">
-    <Link to="/ofertas" className="nav-link active blanco" href="#">Ofertas</Link>
+  <Link to="/ofertas" className="nav-link active blanco" href="#">Ofertas</Link>
   </li>
   <li className="nav-item px-4">
-    <Link to="/componentes" className="nav-link active blanco" href="#">Componentes</Link>
+  <Link to="/componentes" className="nav-link active blanco" href="#">Componentes</Link>
   </li>
   <li className="nav-item px-4">
-    <Link to="/cart"><CartWidget/></Link>
+  <Link to="/cart"><CartWidget/></Link>
   </li>
 </ul>
 </nav>

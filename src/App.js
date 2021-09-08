@@ -13,12 +13,16 @@ import About from './components/Views/About/About';
 import Ofertas from './components/Views/Ofertas/Ofertas';
 import Componentes from './components/Views/Componentes/Componentes';
 import DetalleProducto from './components/Views/DetalleProducto/DetalleProducto';
+import Cart from './components/Views/Cart/Cart';
 import Footer from './components/Views/Footer/Footer';
+//ItemsProvider
+import { CartProvider } from './components/CartProvider';
 
 
 const App = () => {
   return(
     <Router>
+     <CartProvider>
     <div className="App">
       <NavBar title="NavBar"/>
       <Switch>
@@ -27,11 +31,14 @@ const App = () => {
         <Route path="/nosotros" component={About}/>
         <Route path="/ofertas" component={Ofertas}/>
         <Route path="/componentes" component={Componentes}/>
+        <Route path="/cart" component={Cart}/>
         <Route path="/detail/:id" component={DetalleProducto}/>
       </Switch>
       <Footer/>
     </div>
+    </CartProvider>
     </Router>
+    
   );
 }
 

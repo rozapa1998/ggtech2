@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect,} from 'react'
 import { useParams } from 'react-router'
 import ItemDetails from '../../ItemListContainer/ItemDetails'
 
+//Exportamos el create context
+
 const DetalleProducto = () => {
-    const {id} = useParams(); 
+    const {id} = useParams();
     const [productosD, setProductoD] = useState([null])
-    
+
     useEffect(() => {
         const Items =
          [
@@ -63,17 +65,12 @@ const DetalleProducto = () => {
             setProductoD(Items[id])
         }
     }, [id])
-    
-    
+
     return (
         <div className="DetalleProducto">
             <div className="row">
                 <ItemDetails
-                img={productosD.img}
-                titulo={productosD.titulo}
-                descripcion={productosD.descripcion}
-                precio={productosD.precio}
-                stock={productosD.stock}/>
+                item={productosD}/>
             </div>
         </div>
     )
