@@ -24,7 +24,7 @@ export const CartContext = createContext()
 
             //Remover 1 Item
             const removeItem = (itemId) =>{
-                setCart(cart.filter((elem) => elem.item.id =! itemId))
+                setCart(cart.filter((elem) => elem.id =! itemId))
             }
 
             //Clear Carrito

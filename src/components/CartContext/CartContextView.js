@@ -15,22 +15,22 @@ const CartContextView = ({cartItem}) => {
     }
 
     const Eliminar = (x) =>{
-        removeItem(x);
+        removeItem(x)
     }
 
 
     return (
         <div className="CartContext">
-                    <div class="card mb-3 pequeño">
-                        <div class="row g-0">
-                            <div class="col-md-3">
+                    <div className="card mb-3 pequeño">
+                        <div className="row g-0">
+                            <div className="col-md-3">
                             <img src={cartItem.img} class="img-fluid rounded-start imgPequeña" alt="Producto"></img>
                             </div>
-                            <div class="col-md-3">
-                            <div class="card-body">
-                                <h5 class="card-title">{cartItem.titulo}</h5>
-                                <p class="card-text">$ {cartItem.precio}</p>
-                                <p class="card-text">Cantidad: {cartItem.cantidad}</p>
+                            <div className="col-md-3">
+                            <div className="card-body">
+                                <h5 className="card-title">{cartItem.titulo}</h5>
+                                <p className="card-text">$ {cartItem.precio}</p>
+                                <p className="card-text">Cantidad: {cartItem.cantidad}</p>
                             </div>
                             
                             </div>
@@ -40,10 +40,10 @@ const CartContextView = ({cartItem}) => {
                             onAdd={Agregar}/>
                             </div>
                             <div class="col-md-2">
-                                <p class="card-text center pt-5">Total: $ {cartItem.cantidad*cartItem.precio}</p>
+                                <p className="card-text center pt-5">Total: $ {cartItem.cantidad*cartItem.precio}</p>
                             </div>
                             <div class="col-md-1">
-                            <button type="button" class="btn-close pt-5" onClick={Eliminar(cartItem.id)} data-bs-dismiss="alert" aria-label="Close"></button>
+                                <button type="button" className="btn btn-primary pt-5"></button>
                             </div>
                             
                         </div>
