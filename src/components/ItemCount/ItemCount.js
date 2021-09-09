@@ -70,7 +70,11 @@ import "./ItemCount.css"
             </div>
             {count > 1 ? <div className="row">
                 <div className="col-12 ps-5">
-                    <button type="button" id= 'btnCompra' className="btn btn-info"><Link to="/cart">Terminar Compra</Link></button>
+                    <button type="button" id= 'btnCompra' className="btn btn-info" onClick={()=>{
+                        onAdd(count)
+                        setStockCount(stockCount-count)
+                        setCount(1)
+                    } }><Link to="/cart">Terminar Compra</Link></button>
                 </div>    
             </div>
                 : 

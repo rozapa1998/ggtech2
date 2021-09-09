@@ -43,7 +43,7 @@ const CartContextView = ({cartItem}) => {
                                 <p className="card-text center pt-5">Total: $ {cartItem.cantidad*cartItem.precio}</p>
                             </div>
                             <div class="col-md-1">
-                                <button type="button" className="btn btn-primary pt-5"></button>
+                                <button type="button" className="btn btn-primary pt-5" onClick={() => Eliminar(cartItem.id)}></button>
                             </div>
                             
                         </div>
