@@ -21,7 +21,6 @@ export const CartContext = createContext()
                     setCart((prev) => [...prev, {...item, cantidad}])
                 }
             };
-            console.log(cart)
 
             //Remover 1 Item
             const removeItem = (itemId) =>{

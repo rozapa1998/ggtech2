@@ -1,3 +1,11 @@
 .Cartcard{
     width: 100rem;
 }
+
+.imgPequeña{
+    max-width: 150px;
+}
+
+.pequeño{
+    max-width: 1500px;
+}
