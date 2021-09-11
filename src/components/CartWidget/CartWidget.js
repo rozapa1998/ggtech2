@@ -16,7 +16,7 @@ function CartWidget() {
         <div>
             <li className="nav-item">
             <FontAwesomeIcon className="blanco mt-3" icon={faShoppingCart}>
-            </FontAwesomeIcon><span class="translate-middle badge rounded-pill bg-danger">{ItemsTotales}</span>
+            </FontAwesomeIcon><span className="translate-middle badge rounded-pill bg-danger">{ItemsTotales}</span>
         </li>
         </div>
     )
