@@ -21,9 +21,9 @@ const Item = ({item}) => {
                         <img src={item.img} className="card-img-top" alt="Oferta"></img>
                     </Link>
                         <div className="card-body">
-                            <h2 className="card-text">$ {item.precio}</h2>
-                            <h3 className="card-text">{item.titulo}</h3>
-                            <p className="card-text">{item.descripcion}</p>
+                            <h2 className="card-text">$ {item.price}</h2>
+                            <h3 className="card-text">{item.title}</h3>
+                            <p className="card-text">{item.description}</p>
                         </div>
                         <ItemCount stock={item.stock}
                         onAdd={Agregar}/>

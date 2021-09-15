@@ -17,7 +17,8 @@ import Cart from './components/Views/Cart/Cart';
 import Footer from './components/Views/Footer/Footer';
 //ItemsProvider
 import { CartProvider } from './components/CartProvider';
-
+//Firebase
+import { db } from './firebase';
 
 const App = () => {
   return(
