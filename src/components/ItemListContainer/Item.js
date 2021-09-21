@@ -23,7 +23,7 @@ const Item = ({item}) => {
                         <div className="card-body">
                             <h2 className="card-text">$ {item.price}</h2>
                             <h3 className="card-text">{item.title}</h3>
-                            <p className="card-text">{item.description}</p>
+                            <p className="card-text recortar">{item.description}</p>
                         </div>
                         <ItemCount stock={item.stock}
                         onAdd={Agregar}/>

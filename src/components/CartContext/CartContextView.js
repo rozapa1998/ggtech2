@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import "./CartContext.css"
 import { CartContext } from '../CartProvider'
 
@@ -8,6 +8,7 @@ const CartContextView = ({cartItem}) => {
     
     const {addToCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
+    const [sumaTotal, setSumaTotal] = useState(0)
 
     const Agregar = (count) => {
         addToCart(cartItem, count);
@@ -16,6 +17,15 @@ const CartContextView = ({cartItem}) => {
     const Eliminar = (x) =>{
         removeItem(x)
     }
+
+    let precioItemMult = cartItem.cantidad*cartItem.price
+
+    function CalcularTotal() {
+        return precioItemMult
+    }
+    
+
+    
 
 
     return (
@@ -27,8 +37,8 @@ const CartContextView = ({cartItem}) => {
                             </div>
                             <div className="col-md-3">
                             <div className="card-body">
-                                <h5 className="card-title">{cartItem.titulo}</h5>
-                                <p className="card-text">$ {cartItem.precio}</p>
+                                <h5 className="card-title">{cartItem.title}</h5>
+                                <p className="card-text">$ {cartItem.price}</p>
                                 <p className="card-text">Cantidad: {cartItem.cantidad}</p>
                             </div>
                             
@@ -37,7 +47,7 @@ const CartContextView = ({cartItem}) => {
                             
                             </div>
                             <div class="col-md-2">
-                                <p className="card-text center pt-5">Total: $ {cartItem.cantidad*cartItem.precio}</p>
+                                <p className="card-text center pt-5">Total: $ {precioItemMult}</p>
                             </div>
                             <div class="col-md-1">
                                 <button type="button" className="btn-close pt-5" onClick={() => Eliminar(cartItem.id)}></button>

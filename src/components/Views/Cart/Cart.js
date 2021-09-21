@@ -10,23 +10,8 @@ const Cart = () => {
     const EliminarTodo = () =>{
         clear()
     }
+
     
-    const CalcularPrecio = cart.reduce((acc, item) => {
-        return acc + item.precio;
-    }, 0 )
-
-    const CalcularCantidad = cart.reduce((acc, item) => {
-        return acc + item.cantidad;
-    }, 0 )
-
-    const CalcularTotal = () => {
-        if(CalcularCantidad === 2){
-           return CalcularPrecio * CalcularCantidad / 2
-        }else{
-            return CalcularPrecio * CalcularCantidad
-        }
-        
-    }
 
 
     return (
@@ -53,7 +38,7 @@ const Cart = () => {
                 
                 </div>
                 <div className="col-4">
-                <p className="card-text fs-4">Total: $ {CalcularTotal()}</p>
+                <p className="card-text fs-4">Total: $ {}</p>
                 </div>
             </div>
                 

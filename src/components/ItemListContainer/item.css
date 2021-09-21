@@ -17,3 +17,10 @@ p{
 .zoomItem:hover {
     transform: scale(1.05);
   }
+
+.recortar{
+    width:95%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}

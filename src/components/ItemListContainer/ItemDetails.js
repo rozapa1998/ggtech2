@@ -25,9 +25,9 @@ const ItemDetails = ({item}) => {
                     </div>
                     <div className="col-md-8">
                     <div className="card-body">
-                        <h1 className="card-title">{item.titulo}</h1>
+                        <h1 className="card-title">{item.title}</h1>
                         <div className="text-start">
-                        <p className="card-text pb-5">{item.descripcion}</p>
+                        <p className="card-text pb-5">{item.description}</p>
                         </div>
                         <div className="text-end">  
                                 <FontAwesomeIcon className="redes me-4" icon={faTwitter}/>
@@ -35,7 +35,7 @@ const ItemDetails = ({item}) => {
                                 <FontAwesomeIcon className="redes me-4" icon={faWhatsapp}/>
                         </div>
                         <div className="card-footer text-end relative-bottom">
-                            <h3 className="pt-2">Precio =$ {item.precio}</h3>
+                            <h3 className="pt-2">Precio =$ {item.price}</h3>
                                 <div className="container p-3">
                                             <div className="container col-5 count text-end relative-bottom">
                                                 <ItemCount

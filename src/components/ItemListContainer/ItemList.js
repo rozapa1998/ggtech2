@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Item from "../ItemListContainer/Item"
 import { db } from '../../firebase'
-import { getFirestore, collection, query, where, getDocs } from '@firebase/firestore'
+import { collection, query, getDocs } from '@firebase/firestore'
 
 const ItemList = () => {
     const [productos, setProductos] = useState([])
@@ -12,7 +12,6 @@ const ItemList = () => {
 
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            console.log(doc.id, '=>', doc.data())
             
             //Obtenemos los id por separado en un array vacio
             docs.push({...doc.data(), id: doc.id})
