@@ -29,7 +29,7 @@ const DetalleProducto = () => {
         
     };   
     getProducts();
-   }, []);
+   }, [id]);
 
    
 

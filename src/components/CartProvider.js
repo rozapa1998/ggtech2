@@ -30,8 +30,13 @@ export const CartContext = createContext()
             //Clear Carrito
             const clear = () => setCart([])
 
+            //Suma Precio Total
+            const CalcularTotal = cart.reduce((acc, item)=>{
+                return acc + item.price*item.cantidad;
+            }, 0)
+
             return(
-                <CartContext.Provider value={{cart, clear, removeItem, addToCart,isInCart}}>
+                <CartContext.Provider value={{cart, clear, removeItem, addToCart,isInCart, CalcularTotal}}>
                     {children}
                 </CartContext.Provider>
             )

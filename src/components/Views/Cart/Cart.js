@@ -6,11 +6,11 @@ const Cart = () => {
     
     const {cart} = useContext(CartContext);
     const {clear} = useContext(CartContext);
+    const {CalcularTotal} = useContext(CartContext);
 
     const EliminarTodo = () =>{
         clear()
     }
-
     
 
 
@@ -24,7 +24,7 @@ const Cart = () => {
                 {cart.map(items => {
                     return(
                         <CartContextView
-                        key={items.key}
+                        key={items.id}
                         cartItem={items}/>
                     )
                 })}
@@ -38,7 +38,7 @@ const Cart = () => {
                 
                 </div>
                 <div className="col-4">
-                <p className="card-text fs-4">Total: $ {}</p>
+                <p className="card-text fs-4">Total: $ {CalcularTotal}</p>
                 </div>
             </div>
                 

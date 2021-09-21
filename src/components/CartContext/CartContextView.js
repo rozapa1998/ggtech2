@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import "./CartContext.css"
 import { CartContext } from '../CartProvider'
 
@@ -8,6 +8,7 @@ const CartContextView = ({cartItem}) => {
     
     const {addToCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
+    
 
     const Agregar = (count) => {
         addToCart(cartItem, count);
@@ -39,13 +40,13 @@ const CartContextView = ({cartItem}) => {
                             </div>
                             
                             </div>
-                            <div class="col-md-3">
+                            <div className="col-md-3">
                             
                             </div>
-                            <div class="col-md-2">
+                            <div className="col-md-2">
                                 <p className="card-text center pt-5">Total: $ {precioItemMult}</p>
                             </div>
-                            <div class="col-md-1">
+                            <div className="col-md-1">
                                 <button type="button" className="btn-close pt-5" onClick={() => Eliminar(cartItem.id)}></button>
                             </div>
                             
