@@ -11,6 +11,9 @@ const DetalleProducto = () => {
     
     const [productosD, setProductoD] = useState([])
     
+    
+
+   useEffect(() => {
     const getProducts = async () =>{
         const docs = [];
         const q = query(collection(db, "products"));
@@ -24,10 +27,8 @@ const DetalleProducto = () => {
         });
         setProductoD(docs[0])
         
-    };
-
-   useEffect(() => {
-       getProducts();
+    };   
+    getProducts();
    }, []);
 
    

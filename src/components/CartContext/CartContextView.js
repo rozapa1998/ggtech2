@@ -8,7 +8,6 @@ const CartContextView = ({cartItem}) => {
     
     const {addToCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
-    const [sumaTotal, setSumaTotal] = useState(0)
 
     const Agregar = (count) => {
         addToCart(cartItem, count);
@@ -20,9 +19,6 @@ const CartContextView = ({cartItem}) => {
 
     let precioItemMult = cartItem.cantidad*cartItem.price
 
-    function CalcularTotal() {
-        return precioItemMult
-    }
     
 
     
