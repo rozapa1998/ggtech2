@@ -6,13 +6,13 @@ import { CartContext } from '../CartProvider'
 
 const CartContextView = ({cartItem}) => {
     
-    const {addToCart} = useContext(CartContext);
+    //const {addToCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
     
 
-    const Agregar = (count) => {
+    /*const Agregar = (count) => {
         addToCart(cartItem, count);
-    }
+    }*/
 
     const Eliminar = (x) =>{
         removeItem(x)
