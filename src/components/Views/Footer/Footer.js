@@ -5,6 +5,19 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
+    
+    const handlerRedirect = (e) =>{
+        if (e.target.id === "Instagram") {
+            window.open("https://www.instagram.com/")
+        }else if (e.target.id === "Twitter") {
+            window.open("https://twitter.com/")
+        }else if (e.target.id === "Whatsapp") {
+            window.open("https://wa.me/5491168165044?text=Hola!%20Queria%20saber%20si...%20")
+        }
+    }
+    
+    
+    
     return (
     <div className="Footer">
         <div className="container footer mt-4">
@@ -16,9 +29,9 @@ const Footer = () => {
 
                 </div>
                 <div className="col-4 pt-3 position-relative top-0 start-0">
-                    <FontAwesomeIcon className="text-nosotros mx-3" icon={faInstagram}/>
-                    <FontAwesomeIcon className="text-nosotros mx-3" icon={faTwitter}/>
-                    <FontAwesomeIcon className="text-nosotros mx-3" icon={faFacebook}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3" id="Instagram" onClick={handlerRedirect} icon={faInstagram}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3" id="Twitter"   onClick={handlerRedirect} icon={faTwitter}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3" id="Whatsapp"  onClick={handlerRedirect} icon={faFacebook}/>
                 </div>
             </div>
             <div className="row footer-row pt-2">
