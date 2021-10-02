@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { db } from '../../../firebase';
-import Item from '../../ItemListContainer/Item';
+import ItemOfertas from './ItemOfertas';
 
 const Ofertas = () => {
     
@@ -25,10 +25,11 @@ const Ofertas = () => {
 
     return (
         <div className= "Product container">
+            <h1 className="fuente-blanca pt-5">Bienvenidos/as a GGTech el lugar de la tecnologia!</h1>
             <div className="row ms-5">
                 {productosO.map(producto => {
                 return(
-                    <Item
+                    <ItemOfertas
                     key={producto.id}
                     item={producto}/>
                 )}

@@ -80,7 +80,7 @@ const Formulario = ({importeCart}) => {
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Telefono</label>
-                            <input type="text" className="form-control" id="InputTelefono" name="Telefono" value={direccion} onChange={handleOnchange}></input>
+                            <input type="text" className="form-control" id="InputTelefono" name="Telefono" value={telefono} onChange={handleOnchange}></input>
                             <div id="emailHelp" className="form-text">En el caso de que necesitemos comunicarnos.</div>
                         </div>
                         
