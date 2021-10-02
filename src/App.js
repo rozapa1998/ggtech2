@@ -18,6 +18,7 @@ import Footer from './components/Views/Footer/Footer';
 //ItemsProvider
 import { CartProvider } from './components/CartProvider';
 
+
 const App = () => {
   return(
     <Router>
