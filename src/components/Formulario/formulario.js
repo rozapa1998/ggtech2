@@ -13,6 +13,7 @@ const Formulario = ({importeCart}) => {
     const [nombre, setNombre]       = useState("")
     const [direccion, setDireccion] = useState("")
     const [email, setEmail]         = useState("")
+    const [telefono, setTelefono]   = useState("")
     
     //Handler de los datos para su actualizacion
     const handleOnchange = (e) =>{
@@ -22,10 +23,12 @@ const Formulario = ({importeCart}) => {
             setEmail(e.target.value)
         }else if (e.target.name === "Direccion") {
             setDireccion(e.target.value)
+        }else if (e.target.name === "Telefono") {
+            setTelefono(e.target.value)
         }
     }
 
-    //Funcionalidada para agregar a la BD
+    //Funcionalidada para agregar a la BD las compras
     const addCliente = async (e) =>{
         const pedido = []
 
@@ -36,16 +39,15 @@ const Formulario = ({importeCart}) => {
         const Cliente ={
             Nombre: nombre,
             Email: email,
+            Telefono: telefono,
             Direccion: direccion,
             Importe: importeCart,
-            Pedido: JSON.stringify(pedido)
+            Pedido: JSON.stringify(pedido),
+            fecha: new Date()
         }
         
         e.preventDefault()
         await db.collection("compras").doc().set(Cliente)
-
-
-        
     }
     
     
@@ -75,6 +77,11 @@ const Formulario = ({importeCart}) => {
                             <label className="form-label">Direccion</label>
                             <input type="text" className="form-control" id="InputPassword" name="Direccion" value={direccion} onChange={handleOnchange}></input>
                             <div id="emailHelp" className="form-text">Direccion de envio, piso y depto si aplica.</div>
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Telefono</label>
+                            <input type="text" className="form-control" id="InputTelefono" name="Telefono" value={direccion} onChange={handleOnchange}></input>
+                            <div id="emailHelp" className="form-text">En el caso de que necesitemos comunicarnos.</div>
                         </div>
                         
                         <button onClick={addCliente} className="btn btn-primary">Submit</button>
