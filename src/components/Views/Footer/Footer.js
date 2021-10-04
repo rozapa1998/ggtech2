@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Footer.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
@@ -29,9 +29,9 @@ const Footer = () => {
 
                 </div>
                 <div className="col-4 pt-3 position-relative top-0 start-0">
-                    <FontAwesomeIcon className="text-nosotros mx-3" id="Instagram" onClick={handlerRedirect} icon={faInstagram}/>
-                    <FontAwesomeIcon className="text-nosotros mx-3" id="Twitter"   onClick={handlerRedirect} icon={faTwitter}/>
-                    <FontAwesomeIcon className="text-nosotros mx-3" id="Whatsapp"  onClick={handlerRedirect} icon={faFacebook}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3 zoomRedes" id="Instagram" onClick={handlerRedirect} icon={faInstagram}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3 zoomRedes" id="Twitter"   onClick={handlerRedirect} icon={faTwitter}/>
+                    <FontAwesomeIcon className="text-nosotros mx-3 zoomRedes" id="Whatsapp"  onClick={handlerRedirect} icon={faWhatsapp}/>
                 </div>
             </div>
             <div className="row footer-row pt-2">

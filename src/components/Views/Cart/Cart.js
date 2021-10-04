@@ -10,9 +10,14 @@ const Cart = () => {
     const {clear} = useContext(CartContext);
     const {CalcularTotal} = useContext(CartContext);
     const [importeCart, setImporteCart] = useState(CalcularTotal)
+    const [terminarCompra, setTerminarCompra] = useState(false)
 
     const EliminarTodo = () =>{
         clear()
+    }
+
+    const TerminarCompra = () =>{
+        setTerminarCompra(true)
     }
     
 
@@ -42,14 +47,22 @@ const Cart = () => {
                                             <div className="col-4">
                                                 <p className="card-text fs-4">Total: $ {CalcularTotal}</p>
                                         </div>
+                                        <div className="col-4 pt-2">
+                                                
+                                        </div>
+                                        <div className="col-4 pt-2">
+                                                
+                                        </div>
+                                        <div className="col-4 pt-2">
+                                                <button className="btn btn-success" onClick={TerminarCompra}>Terminar Compra</button>
+                                        </div>
                                 </div>
                         </div>
                     </div>
                 </div>
                 <div className="container pt-4 ">
                     <div className="row pt-3">
-                        <Formulario
-                        importeCart={importeCart}/>
+                        {terminarCompra === true? <Formulario importeCart={importeCart}/>: null}
                     </div>
                 </div>
             </div>
