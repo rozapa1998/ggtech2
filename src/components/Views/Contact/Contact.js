@@ -2,7 +2,6 @@ import React from 'react'
 import "../Contact/contacto.css"
 import { faTwitter, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
     
